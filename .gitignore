@@ -1,0 +1,22 @@
+node_modules/
+dist/
+
+# Local runtime/config
+.you-skills/
+*.log
+
+# Editor / tools
+.vscode/
+.idea/
+.cursor/
+terminals/
+agent-transcripts/
+mcps/
+
+# OS / temp
+.DS_Store
+Thumbs.db
+
+# Local-only design/docs
+docs/
+

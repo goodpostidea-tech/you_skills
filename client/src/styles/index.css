@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #fcfcfc;
+  --surface: #ffffff;
+  --border-light: #f0f0f0;
+  --border-mid: #eaeaea;
+  --ink-primary: #1a1a1a;
+  --ink-muted: #7a7a7a;
+  --accent: #1a1a1a;
+  --accent-light: #f0f0f0;
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 18px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
+  --shadow-drawer: -8px 0 30px -12px rgba(0, 0, 0, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --transition: 0.2s ease;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
+    background: var(--bg-page);
+    color: var(--ink-primary);
+    line-height: 1.5;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* 技能主题色 — 按来源 */
+.skill-theme-codex { --skill: #d45b1e; --skill-bg: #fef4ec; }
+.skill-theme-cursor { --skill: #2b6f9e; --skill-bg: #eaf1f7; }
+.skill-theme-openclaw { --skill: #1f8b4c; --skill-bg: #eaf5ed; }
+.skill-theme-agents { --skill: #8a5bd6; --skill-bg: #f3edfd; }
+.skill-theme-custom { --skill: #5f5f5f; --skill-bg: #f5f5f5; }
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-mid, #e0e0e0);
+  border-radius: 20px;
+}
+
+/* 扫描中动效：旋转圆环 */
+@keyframes scan-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.scan-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--ink-primary);
+  border-radius: 50%;
+  animation: scan-spin 0.9s linear infinite;
+}
+
+/* SKILL.md 代码块展示（详情侧栏） */
+.skill-md pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  font-size: 0.75rem;
+  background: color-mix(in_oklab, var(--accent) 14%, #020617 86%);
+  color: #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  margin: 0.9rem 0;
+  border: 1px solid color-mix(in_oklab, var(--accent) 55%, #1f2937 45%);
+  overflow-x: auto;
+}
+
+.skill-md pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.skill-md code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background: color-mix(in_oklab, var(--accent) 18%, #111827 82%);
+  color: var(--accent);
+}
