@@ -2,6 +2,8 @@
 
 Visual Management for Local Skills.
 
+[![npm version](https://img.shields.io/npm/v/you-skills.svg)](https://www.npmjs.com/package/you-skills)
+
 YouSkills is a **visual manager for local AI skills**. It scans standard skill folders on your machine (Codex / Cursor / OpenClaw / custom paths) and shows them in a clean web UI, while staying **strictly read‑only** and **agent‑friendly**.
 
 ---
@@ -41,6 +43,19 @@ YouSkills is a **visual manager for local AI skills**. It scans standard skill f
 
 Requires **Node.js 18+**.
 
+### Install via npm / npx
+
+```bash
+# One-off run (no global install)
+npx you-skills
+
+# Or install globally
+npm install -g you-skills
+you-skills
+```
+
+### Run from source
+
 ```bash
 git clone <this-repo>
 cd you_skills
@@ -48,12 +63,6 @@ cd you_skills
 npm install
 npm run build
 npm start    # opens http://localhost:12434
-```
-
-After publishing to npm, you will be able to run:
-
-```bash
-npx you-skills
 ```
 
 By default the app opens `http://localhost:12434` in your browser.

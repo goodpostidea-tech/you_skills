@@ -21,6 +21,19 @@
 
 需要 Node.js **18+**。
 
+### 通过 npm / npx 直接使用
+
+```bash
+# 一次性运行（无需全局安装）
+npx you-skills
+
+# 或全局安装后多次使用
+npm install -g you-skills
+you-skills
+```
+
+### 本地源码运行
+
 ```bash
 # 安装依赖
 npm install
@@ -32,12 +45,6 @@ npm run build
 npm start
 # 或
 node dist/cli.js
-```
-
-发布到 npm 之后，可以直接通过 npx 运行（无需 clone 仓库）：
-
-```bash
-npx you-skills
 ```
 
 默认会在浏览器中打开：`http://localhost:12434`。
