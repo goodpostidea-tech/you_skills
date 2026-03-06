@@ -1,6 +1,6 @@
 {
   "name": "you-skills",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Visual manager for local AI skills (Codex / Cursor / OpenClaw, etc.)",
   "type": "module",
   "main": "dist/server/index.js",

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { startServer } from "./server/index.js";
 import { BASE_URL } from "./constants.js";
 import open from "open";
